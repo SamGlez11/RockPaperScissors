@@ -5,10 +5,12 @@ from player import Player
 import sys
 from game import Game
 
-server = "100.84.22.169"
+server = ''
 port = 5555
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+server_ip = socket.gethostbyname(socket.gethostname())
 
 try:
     s.bind((server, port))
