@@ -43,7 +43,10 @@ def redrawWindow(win, game, p):
         win.blit(text, (800, 200))
 
         text = font.render("Opponent", True, (0, 255, 255))
-        win.blit(text, (380, 200))
+        win.blit(text, (390, 200))
+
+        text = font.render("You", True, (0, 255, 255))
+        win.blit(text, (150, 200))
 
         move1 = game.get_player_move(0)
         move2 = game.get_player_move(1)
@@ -77,7 +80,7 @@ def redrawWindow(win, game, p):
 
     pygame.display.update()
 
-btns = [Button("Rock", 50, 500, (0, 0, 0)), Button("Scissors", 250, 500, (255, 0, 0)), Button("Paper", 450, 500, (0, 255, 0))]
+btns = [Button("Rock", 50, 500, (0, 0, 0)), Button("Scissors", 250, 500, (128, 0, 0)), Button("Paper", 450, 500, (70, 130, 180))]
 def main():
     run = True
     clock = pygame.time.Clock()
@@ -112,7 +115,7 @@ def main():
             else:
                 text = font.render("You Lose!", True, (255, 0, 0))
 
-            win.blit(text, (width/2 - text.get_width()/2, height/2 - text.get_height()/2))
+            win.blit(text, (width/2 - text.get_width()/2, height/8 - text.get_height()/2))
             pygame.display.update()
             pygame.time.delay(2000)
 
