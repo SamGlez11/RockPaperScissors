@@ -5,7 +5,7 @@ from player import Player
 import sys
 from game import Game
 
-server = ''
+server = '0.0.0.0'  # Listen on all interfaces for external connections
 port = 5555
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
